@@ -36,12 +36,20 @@ The trade-off with other survival or horror games:
 - First person:
 	- Far more visceral
 	- Automatic line of sight. Darkwood had to add line of sight.
+	- See Megabonk, Lethal Company
 ### Building
-
 **Continuous or with waves like a tower defence?**
 - If you have to improve your base continually rather than between waves like a tower defence, it gives the player a clear reason to need to traverse the base area, both to get resources and to construct things. 
 - If the player has to build in a horror environment that gives a perfect balance. If it was like Doom you'd constantly be being interrupted and it would be very annoying. But horror adds tension and a need for awareness. Enemies are kept scary by relative rarity.
+### Combat
+- Non-combat or minimal combat:
+	- Subnautica, Lethal Company, REPO
+	- In this world you're not defending your base.
+- In 3D, without the resources to do good animations or blocking/parrying, melee combat would probably be rubbish.
+- There should not be a player power fantasy.
+	- This includes dodging.
+- Far Cry 3?
+- Limited ammo or magazine sizes? "If you shoot one the rest will jump you"
 ### Misc questions
 - In later rounds do we want the base to degrade noticeably from successive enemy attacks? Getting overrun, like the end of Platoon. A desperate last stand,.
-
-**7/11/26**
+### 7/11/26
