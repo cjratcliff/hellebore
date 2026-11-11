@@ -36,3 +36,25 @@ func _input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	if event.is_action_pressed("fire"):
+		fire()
+
+func fire():
+	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
+	
+	# Cast from the center of the camera screen
+	var viewport_center := get_viewport().get_visible_rect().size / 2
+	var origin = camera.project_ray_origin(viewport_center)
+	var end = origin + camera.project_ray_normal(viewport_center) * 1000
+	
+	var query = PhysicsRayQueryParameters3D.create(origin, end)
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		var hit_object = result.collider
+		print("Hit: ", hit_object.name)
+		
+		# Example: Deal damage if the target has a take_damage method
+		if hit_object.has_method("take_damage"):
+			hit_object.take_damage(1)
