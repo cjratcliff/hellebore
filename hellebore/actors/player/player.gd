@@ -4,6 +4,8 @@ var speed = 3
 
 var look_sensitivity = 0.003
 
+@onready var camera: Camera3D = $Camera3D
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -23,8 +25,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		rotate_y(-event.relative.x * look_sensitivity)
+	# Don't move the camera if in menu
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		rotate_y(-event.relative.x * look_sensitivity) # pan
+		camera.rotate_x(-event.relative.y * look_sensitivity) # tilt
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
