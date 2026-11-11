@@ -32,10 +32,16 @@ The trade-off with other survival or horror games:
 - **Horror**: You get a way to do progression without ruining the sense of threat by making the player powerful. It's done to the environment instead.
 - **Tower defence**: Much more engaging when the enemies come, defence design is more interesting and is something you engage with personally, you don't have to watch helplessly if you realise your setup wasn't quite enough.
 ### Perspective
-RPG, obviously
+- Has to be RPG if it's 2D.
+- First person:
+	- Far more visceral
+	- Automatic line of sight. Darkwood had to add line of sight.
+### Building
+
+**Continuous or with waves like a tower defence?**
+- If you have to improve your base continually rather than between waves like a tower defence, it gives the player a clear reason to need to traverse the base area, both to get resources and to construct things. 
+- If the player has to build in a horror environment that gives a perfect balance. If it was like Doom you'd constantly be being interrupted and it would be very annoying. But horror adds tension and a need for awareness. Enemies are kept scary by relative rarity.
 ### Misc questions
 - In later rounds do we want the base to degrade noticeably from successive enemy attacks? Getting overrun, like the end of Platoon. A desperate last stand,.
-- Line of sight?
-- Continuous or with waves like a tower defence?
 
 **7/11/26**
