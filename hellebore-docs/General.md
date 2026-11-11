@@ -45,6 +45,7 @@ The trade-off with other survival or horror games:
 ### Combat
 - Non-combat or minimal combat:
 	- Subnautica, Lethal Company, REPO
+	- Not a good choice for this game. Needs to either index high on horror or exploration to maintain interest.
 	- In this world you're not defending your base.
 - In 3D, without the resources to do good animations or blocking/parrying, melee combat would probably be rubbish.
 - There should not be a player power fantasy.
