@@ -4,13 +4,20 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_rybk0"]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_rybk0"]
+size = Vector2(100, 100)
+
 [node name="Node3D" type="Node3D" unique_id=2018712568]
 
 [node name="Player" parent="." unique_id=1873314653 instance=ExtResource("1_2262g")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=51833535]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.492838)
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1867670455]
+transform = Transform3D(0.5895103, 0.5071961, -0.62867296, 0, 0.7782909, 0.6279039, 0.80776083, -0.37015578, 0.4588105, 0, 4.83245, 0)
+shadow_enabled = true
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=51833535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4681635, -9.492838)
 mesh = SubResource("BoxMesh_rybk0")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1867670455]
-transform = Transform3D(0.5895103, 0.5071961, -0.62867296, 0, 0.7782909, 0.6279038, 0.80776083, -0.37015578, 0.45881054, 0, 4.83245, 0)
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=465893429]
+mesh = SubResource("PlaneMesh_rybk0")

@@ -32,7 +32,8 @@ The trade-off with other survival or horror games:
 - **Horror**: You get a way to do progression without ruining the sense of threat by making the player powerful. It's done to the environment instead.
 - **Tower defence**: Much more engaging when the enemies come, defence design is more interesting and is something you engage with personally, you don't have to watch helplessly if you realise your setup wasn't quite enough.
 ### Perspective
-- Has to be RPG if it's 2D.
+- 2D:
+	- Has to be RPG perspective
 - First person:
 	- Far more visceral
 	- Automatic line of sight. Darkwood had to add line of sight.
