@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://qqlvl0rd6yr2"]
 
-[ext_resource type="PackedScene" uid="uid://bpl20jx02jq1h" path="res://actors/player/player.tscn" id="1_2262g"]
+[ext_resource type="PackedScene" uid="uid://d4adphfqgeb4w" path="res://actors/player/player.tscn" id="1_2262g"]
 
-[node name="Main" type="Node2D" unique_id=2091069614]
+[sub_resource type="BoxMesh" id="BoxMesh_rybk0"]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1118446224]
+[node name="Node3D" type="Node3D" unique_id=2018712568]
 
-[node name="Player" parent="." unique_id=259804024 instance=ExtResource("1_2262g")]
+[node name="Player" parent="." unique_id=1873314653 instance=ExtResource("1_2262g")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=51833535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8262997)
+mesh = SubResource("BoxMesh_rybk0")
