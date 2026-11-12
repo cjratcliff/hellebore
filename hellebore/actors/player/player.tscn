@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cdbfsy1mesqy1" path="res://actors/player/player.gd" id="1_nvxhs"]
 [ext_resource type="PackedScene" uid="uid://43j1qh66agi5" path="res://actors/player/pistol.fbx" id="2_ilk7j"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rybk0"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1873314653 groups=["player"]]
 script = ExtResource("1_nvxhs")
 
@@ -11,3 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.711199, 0)
 
 [node name="pistol" parent="Camera3D" unique_id=1680183230 instance=ExtResource("2_ilk7j")]
 transform = Transform3D(0.99784935, 0, 0.0655489, 0, 1, 0, -0.0655489, 0, 0.99784935, 0.3675239, -0.43338168, -0.6970133)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=704709170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0627842, 0)
+shape = SubResource("CapsuleShape3D_rybk0")

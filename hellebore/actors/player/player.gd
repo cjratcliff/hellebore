@@ -3,6 +3,7 @@ extends CharacterBody3D
 var speed = 5
 var max_ammo = 6
 var ammo = max_ammo
+var gravity = 10
 
 var look_sensitivity = 0.003
 
@@ -30,7 +31,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		crosshair.set_max_size()
 	
-	velocity = dir.normalized() * speed
+	velocity.x = dir.normalized().x * speed
+	velocity.z = dir.normalized().z * speed
+	
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+	
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -40,6 +46,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotate_x(-event.relative.y * look_sensitivity) # tilt
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("jump"):
+		jump()
+	
 	if event.is_action_pressed("fire"):
 		fire()
 	
@@ -74,3 +83,6 @@ func set_ammo(amount):
 	ammo = amount
 	var hud = get_tree().get_first_node_in_group("hud")
 	hud.set_ammo(ammo)
+
+func jump():
+	velocity.y += 5

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://djfgal0ehadmy" path="res://ui/hud/crosshair/crosshair.gd" id="1_k37yb"]
 
 [node name="Crosshair" type="Control" unique_id=1453729034 groups=["crosshair"]]
+modulate = Color(1, 1, 1, 0.50980395)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

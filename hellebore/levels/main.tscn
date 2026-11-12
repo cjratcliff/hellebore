@@ -10,17 +10,24 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Arr
 geometry_source_geometry_mode = 2
 geometry_source_group_name = &"nav_mesh_source"
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_rybk0"]
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4vq4b"]
+size = Vector3(100, 1, 100)
+
 [sub_resource type="BoxMesh" id="BoxMesh_rybk0"]
 size = Vector3(3.7420654, 1, 1)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_rybk0"]
-size = Vector2(100, 100)
+[sub_resource type="BoxShape3D" id="BoxShape3D_rybk0"]
+size = Vector3(3.74115, 1, 1)
 
 [node name="Node3D" type="Node3D" unique_id=2018712568]
 
 [node name="Hud" parent="." unique_id=1331191350 instance=ExtResource("1_l8qe7")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=570409846]
+visible = false
 navigation_mesh = SubResource("NavigationMesh_rybk0")
 
 [node name="Player" parent="." unique_id=1873314653 instance=ExtResource("1_2262g")]
@@ -29,12 +36,24 @@ navigation_mesh = SubResource("NavigationMesh_rybk0")
 transform = Transform3D(0.5895103, 0.5071961, -0.62867296, 0, 0.7782909, 0.6279039, 0.80776083, -0.37015578, 0.4588105, 0, 4.83245, 0)
 shadow_enabled = true
 
-[node name="Cube" type="MeshInstance3D" parent="." unique_id=51833535 groups=["nav_mesh_source"]]
+[node name="Mob" parent="." unique_id=1102018426 instance=ExtResource("2_wdj6m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3659232, 0, -11.309397)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=987102695]
+
+[node name="Mesh" type="MeshInstance3D" parent="Floor" unique_id=465893429 groups=["nav_mesh_source"]]
+mesh = SubResource("PlaneMesh_rybk0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1187750576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_4vq4b")
+
+[node name="Cube" type="StaticBody3D" parent="." unique_id=1015292848]
+
+[node name="Mesh" type="MeshInstance3D" parent="Cube" unique_id=51833535 groups=["nav_mesh_source"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3710327, 0.4681635, -9.492838)
 mesh = SubResource("BoxMesh_rybk0")
 
-[node name="Floor" type="MeshInstance3D" parent="." unique_id=465893429 groups=["nav_mesh_source"]]
-mesh = SubResource("PlaneMesh_rybk0")
-
-[node name="Mob" parent="." unique_id=1102018426 instance=ExtResource("2_wdj6m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3659232, 0, -11.309397)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube" unique_id=189906820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3645935, 0.4681635, -9.492838)
+shape = SubResource("BoxShape3D_rybk0")
