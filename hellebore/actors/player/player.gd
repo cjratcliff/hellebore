@@ -31,19 +31,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotate_x(-event.relative.y * look_sensitivity) # tilt
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
 	if event.is_action_pressed("fire"):
 		fire()
 
 func fire():
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
-	# Cast from the center of the camera screen
+	# Cast from the center of the camera
 	var viewport_center := get_viewport().get_visible_rect().size / 2
 	var origin = camera.project_ray_origin(viewport_center)
 	var end = origin + camera.project_ray_normal(viewport_center) * 1000
