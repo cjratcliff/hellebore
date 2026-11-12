@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 var speed = 3
+var max_ammo = 6
+var ammo = max_ammo
 
 var look_sensitivity = 0.003
 
@@ -8,6 +10,7 @@ var look_sensitivity = 0.003
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	set_ammo(max_ammo)
 
 func _physics_process(delta: float) -> void:
 	var dir = Vector3.ZERO
@@ -33,8 +36,16 @@ func _unhandled_input(event: InputEvent) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("fire"):
 		fire()
+	
+	if event.is_action_pressed("reload"):
+		reload()
 
 func fire():
+	if ammo <= 0:
+		return
+	
+	set_ammo(ammo - 1)
+	
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
 	# Cast from the center of the camera
@@ -49,3 +60,11 @@ func fire():
 		var hit_object = result.collider
 		if hit_object.has_method("take_damage"):
 			hit_object.take_damage(1)
+
+func reload():
+	set_ammo(max_ammo)
+	
+func set_ammo(amount):
+	ammo = amount
+	var hud = get_tree().get_first_node_in_group("hud")
+	hud.set_ammo(ammo)

@@ -10,4 +10,4 @@ script = ExtResource("1_nvxhs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.711199, 0)
 
 [node name="pistol" parent="Camera3D" unique_id=1680183230 instance=ExtResource("2_ilk7j")]
-transform = Transform3D(0.99784935, 0, 0.0655489, 0, 1, 0, -0.0655489, 0, 0.99784935, 0.3254124, -0.52728105, -0.5850207)
+transform = Transform3D(0.99784935, 0, 0.0655489, 0, 1, 0, -0.0655489, 0, 0.99784935, 0.3675239, -0.43338168, -0.6970133)
