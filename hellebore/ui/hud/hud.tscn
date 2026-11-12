@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bivg44rdf550e"]
+
+[ext_resource type="Script" uid="uid://bbq1buv0ku1vs" path="res://ui/hud/hud.gd" id="1_276te"]
+[ext_resource type="PackedScene" uid="uid://b2032o78r8ms7" path="res://ui/hud/crosshair/crosshair.tscn" id="2_4d6w6"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1331191350 groups=["hud"]]
+script = ExtResource("1_276te")
+
+[node name="Ammo" type="Label" parent="." unique_id=1642315087]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 89.0
+offset_top = -97.0
+offset_right = 129.0
+offset_bottom = -74.0
+grow_vertical = 0
+
+[node name="Crosshair" parent="." unique_id=1453729034 instance=ExtResource("2_4d6w6")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
