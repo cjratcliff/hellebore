@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var max_health = 3
+var health = max_health
 var speed = 1
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
@@ -14,7 +16,9 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func take_damage(amount: float):
-	die()
+	health -= 1
+	if health <= 0:
+		die()
 
 func die():
 	queue_free()
