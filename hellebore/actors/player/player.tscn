@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://d4adphfqgeb4w"]
 
 [ext_resource type="Script" uid="uid://cdbfsy1mesqy1" path="res://actors/player/player.gd" id="1_nvxhs"]
+[ext_resource type="PackedScene" uid="uid://43j1qh66agi5" path="res://actors/player/pistol.fbx" id="2_ilk7j"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1873314653 groups=["player"]]
 script = ExtResource("1_nvxhs")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1987355446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.711199, 0)
+
+[node name="pistol" parent="Camera3D" unique_id=1680183230 instance=ExtResource("2_ilk7j")]
+transform = Transform3D(0.99784935, 0, 0.0655489, 0, 1, 0, -0.0655489, 0, 0.99784935, 0.3254124, -0.52728105, -0.5850207)

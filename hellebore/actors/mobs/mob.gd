@@ -9,6 +9,7 @@ func _physics_process(delta: float) -> void:
 	if player != null:
 		nav_agent.target_position = player.global_position
 		var dir = global_position.direction_to(nav_agent.get_next_path_position())
+		dir.y = 0
 		velocity = dir * speed
 		move_and_slide()
 
