@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General.md",
+                "file": "Art/Examples.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "General"
+              "title": "Examples"
             }
           }
         ]
@@ -188,9 +188,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "a4a32c2bdef48b1c",
+  "active": "0eefe9b1c4b0405f",
   "lastOpenFiles": [
+    "Images/Pasted image 20261112235526.png",
     "Similar games.md",
+    "Art/Examples.md",
+    "Images/Pasted image 20261112235250.png",
+    "Images/Pasted image 20261112234124.png",
+    "Images/Pasted image 20261112234045.png",
+    "Images/Pasted image 20261112233937.png",
+    "Images",
     "General.md",
     "Pre-history.md",
     "Technical",
