@@ -24,6 +24,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("strafe_right"):
 		dir += transform.basis.x
 	
+	var crosshair = get_tree().get_first_node_in_group("crosshair")
+	if dir == Vector3.ZERO:
+		crosshair.set_min_size()
+	else:
+		crosshair.set_max_size()
+	
 	velocity = dir.normalized() * speed
 	move_and_slide()
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b2032o78r8ms7"]
 
-[ext_resource type="Texture2D" uid="uid://dh2pumuqptuje" path="res://ui/hud/crosshair/crosshair.png" id="1_7lel2"]
+[ext_resource type="Texture2D" uid="uid://bari82vb7tv3c" path="res://ui/hud/crosshair/crosshair.png" id="1_7lel2"]
 [ext_resource type="Script" uid="uid://djfgal0ehadmy" path="res://ui/hud/crosshair/crosshair.gd" id="1_k37yb"]
 
-[node name="Crosshair" type="Control" unique_id=1453729034]
+[node name="Crosshair" type="Control" unique_id=1453729034 groups=["crosshair"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,9 +23,11 @@ stretch_mode = 2
 
 [node name="Right" type="TextureRect" parent="." unique_id=34616675]
 layout_mode = 0
-offset_top = -8.0
-offset_right = 16.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 32.0
+offset_bottom = 24.0
+rotation = 3.1415927
 texture = ExtResource("1_7lel2")
 stretch_mode = 2
 
@@ -39,9 +41,10 @@ stretch_mode = 2
 
 [node name="Down" type="TextureRect" parent="." unique_id=824470188]
 layout_mode = 0
-offset_left = 8.0
-offset_right = 24.0
-offset_bottom = 16.0
-rotation = 1.5707964
+offset_left = -8.0
+offset_top = 16.0
+offset_right = 8.0
+offset_bottom = 32.0
+rotation = -1.5707964
 texture = ExtResource("1_7lel2")
 stretch_mode = 2
