@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var speed = 3
+var speed = 5
 var max_ammo = 6
 var ammo = max_ammo
 

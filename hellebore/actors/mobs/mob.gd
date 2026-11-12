@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 var max_health = 3
 var health = max_health
-var speed = 1
+var speed = 2
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
