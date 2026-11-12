@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdbfsy1mesqy1" path="res://actors/player/player.gd" id="1_nvxhs"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1873314653]
+[node name="Player" type="CharacterBody3D" unique_id=1873314653 groups=["player"]]
 script = ExtResource("1_nvxhs")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1987355446]

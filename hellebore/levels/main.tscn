@@ -4,6 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bivg44rdf550e" path="res://ui/hud.tscn" id="1_l8qe7"]
 [ext_resource type="PackedScene" uid="uid://bdwub74y0vit1" path="res://actors/mobs/mob.tscn" id="2_wdj6m"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_rybk0"]
+vertices = PackedVector3Array(-49.5, 0.5, -49.5, -49.5, 0.5, 49.5, 49.5, 0.5, 49.5, 49.5, 0.5, -49.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+geometry_source_geometry_mode = 2
+geometry_source_group_name = &"nav_mesh_source"
+
 [sub_resource type="BoxMesh" id="BoxMesh_rybk0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rybk0"]
@@ -12,6 +18,9 @@ size = Vector2(100, 100)
 [node name="Node3D" type="Node3D" unique_id=2018712568]
 
 [node name="Hud" parent="." unique_id=1331191350 instance=ExtResource("1_l8qe7")]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=570409846]
+navigation_mesh = SubResource("NavigationMesh_rybk0")
 
 [node name="Player" parent="." unique_id=1873314653 instance=ExtResource("1_2262g")]
 
@@ -23,7 +32,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4681635, -9.492838)
 mesh = SubResource("BoxMesh_rybk0")
 
-[node name="Floor" type="MeshInstance3D" parent="." unique_id=465893429]
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=465893429 groups=["nav_mesh_source"]]
 mesh = SubResource("PlaneMesh_rybk0")
 
 [node name="Mob" parent="." unique_id=1102018426 instance=ExtResource("2_wdj6m")]

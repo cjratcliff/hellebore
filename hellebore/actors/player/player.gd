@@ -53,8 +53,5 @@ func fire():
 	
 	if result:
 		var hit_object = result.collider
-		print("Hit: ", hit_object.name)
-		
-		# Example: Deal damage if the target has a take_damage method
 		if hit_object.has_method("take_damage"):
 			hit_object.take_damage(1)
