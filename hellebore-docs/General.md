@@ -5,8 +5,12 @@ In a loop improve your base and then survive the night as spirits and whatnot pe
 This is a fairly natural thing. It should be possible to build naturally and watch the good stuff emerge. It's an interesting scenario so just creating a simulator for it is motivating in itself.
 
 You will want to take care of threats as soon as possible, before they can gather? It shouldn't feel like mowing the lawn.
+### Risk and reward during the survival phase
+Reasons for the player to stay mobile and not shelter in place.
 
 If there needs to be an incentive for the player to venture out into danger consider having enemies drop loot (so long as they don't get farmed or say goodbye to the vibe) or tasks to do or items that spawn at night like stars in Terraria. But none of this may be necessary if the enemy AI keeps the player on the move.
+
+During the survival phase the player could harvest, kill enemies for loot, just try to survive or kill the boss in order to end the wave. Maybe more than one of these.
 ### Building and survival
 What we most want to do is avoid making it two separate games, which would happen if the base design had no impact on or trade-off with survivability. Budget and space means there will always be some trade-off. You could also have adjacency effects and enemies that do very well in certain terrains.
 #### Building impacting survival
@@ -39,7 +43,14 @@ The trade-off with other survival or horror games:
 	- Automatic line of sight. Darkwood had to add line of sight.
 	- See Megabonk, Lethal Company
 ### Building
-**Continuous or with waves like a tower defence?**
+- Tiles will probably be necessary. It's a nice way of not having to worry about things being too close together.
+- I doubt there will be any terraforming. The terrain will be one of the things that makes the map interesting.
+#### Perspective
+First person perspective is fine for building. That's just Minecraft.
+#### Continuous or with waves like a tower defence?
+- Farming or building while there are enemies about feels really weird. It should be noisy and attract enemies. No-one would do it in real life.
+- Doing it continuous and having less dangerous periods for building makes it boring if the player doesn't have any building to do or completes it early.
+- It's probably necessary to give the player a break from the tension.
 - If you have to improve your base continually rather than between waves like a tower defence, it gives the player a clear reason to need to traverse the base area, both to get resources and to construct things. 
 - If the player has to build in a horror environment that gives a perfect balance. If it was like Doom you'd constantly be being interrupted and it would be very annoying. But horror adds tension and a need for awareness. Enemies are kept scary by relative rarity.
 ### Combat
