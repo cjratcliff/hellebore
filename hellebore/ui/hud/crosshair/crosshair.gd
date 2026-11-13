@@ -5,11 +5,9 @@ extends Control
 @onready var left: TextureRect = $Left
 @onready var right: TextureRect = $Right
 
-@export var min_size: float = 20.0
-@export var max_size: float = 60.0
-@export var transition_speed: float = 10.0 # Adjust for faster/slower smoothing
+var transition_speed: float = 10.0 # Adjust for faster/slower smoothing
 
-var desired_size: float = min_size
+var desired_size: float = 0.0 #min_size
 var current_size: float = 0.0
 
 # Store original center positions (when there is no spacing)
@@ -24,11 +22,6 @@ func _ready() -> void:
 	base_down_pos = down.position
 	base_left_pos = left.position
 	base_right_pos = right.position
-	
-	# Initialize at min size
-	current_size = min_size
-	desired_size = min_size
-	_update_crosshair_positions(current_size)
 
 func _process(delta: float) -> void:
 	# Only process if we haven't reached the desired size yet
@@ -47,8 +40,11 @@ func _update_crosshair_positions(size: float) -> void:
 	left.position = base_left_pos + Vector2(-size, 0)
 	right.position = base_right_pos + Vector2(size, 0)
 
-func set_min_size() -> void:
-	desired_size = min_size
+func set_crosshair_size(fov: float, spread_angle: float):
+	desired_size = _calc_size(fov, spread_angle)
 
-func set_max_size() -> void:
-	desired_size = max_size
+func _calc_size(vertical_fov: float, spread_angle: float):
+	# camera.fov is the vertical fov
+	# all input angles are in degrees
+	var viewport_height = get_viewport_rect().size.y
+	return (viewport_height / 2.0) * (tan(deg_to_rad(spread_angle)) / tan(deg_to_rad(vertical_fov) / 2.0))

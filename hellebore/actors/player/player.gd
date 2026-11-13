@@ -3,6 +3,8 @@ extends CharacterBody3D
 var speed = 5
 var max_ammo = 6
 var ammo = max_ammo
+var min_spread = 1.5 # degrees
+var max_spread = 6.0 # degrees
 var gravity = 10
 
 var look_sensitivity = 0.003
@@ -27,9 +29,9 @@ func _physics_process(delta: float) -> void:
 	
 	var crosshair = get_tree().get_first_node_in_group("crosshair")
 	if dir == Vector3.ZERO:
-		crosshair.set_min_size()
+		crosshair.set_crosshair_size(camera.fov, min_spread)
 	else:
-		crosshair.set_max_size()
+		crosshair.set_crosshair_size(camera.fov, max_spread)
 	
 	velocity.x = dir.normalized().x * speed
 	velocity.z = dir.normalized().z * speed
