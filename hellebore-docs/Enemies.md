@@ -7,4 +7,6 @@ Interesting enemy design keeps it from being a classic boomer shooter.
 	- Very cool when it goes right over you.
 	- Inspiration: Tallboys (Dishonored), Striders (HL2), Crow Fishers (Mad Max: Fury Road)
 - Ghost that disappears and is harmless in light. Can go through walls.
+- Enemy that makes nearby lights go out, like a dementor. They probably flicker first to give the player some warning and a chance to kill the creature.
+- Crebain. Flyers that can spot the player and call other creatures in.
 - Trash mob. Melee attacker.

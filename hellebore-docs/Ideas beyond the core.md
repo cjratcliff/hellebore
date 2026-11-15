@@ -1,0 +1,3 @@
+- Weather
+	- Rain, fog
+- Anomalies, like in Stalker

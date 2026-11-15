@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Similar games.md",
+                "file": "General.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Similar games"
+              "title": "General"
             }
           }
         ],
@@ -205,11 +205,12 @@
   },
   "active": "54b71a9ac1dc1b17",
   "lastOpenFiles": [
+    "Ideas beyond the core.md",
     "Enemies.md",
+    "Similar games.md",
     "General.md",
     "Art/Examples.md",
     "Images/Pasted image 20261112235526.png",
-    "Similar games.md",
     "Images/Pasted image 20261112235250.png",
     "Images/Pasted image 20261112234124.png",
     "Images/Pasted image 20261112234045.png",
