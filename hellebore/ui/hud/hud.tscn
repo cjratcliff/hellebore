@@ -49,3 +49,12 @@ step = 0.0
 value = 50.0
 texture_under = ExtResource("3_w75iv")
 texture_progress = ExtResource("4_imuuq")
+
+[node name="HitFlashRect" type="ColorRect" parent="." unique_id=1795407990]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.96862745, 0, 0.015686275, 0)
