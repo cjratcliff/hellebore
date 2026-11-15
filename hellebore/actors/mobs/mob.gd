@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 		global_transform.basis = Basis(smoothed_quat)
 
 func take_damage(amount: float):
-	health -= 1
+	health -= amount
 	if health <= 0:
 		die()
 

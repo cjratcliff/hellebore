@@ -5,6 +5,8 @@ var max_ammo = 6
 var ammo = max_ammo
 var min_spread = 1.5 # degrees
 var max_spread = 6.0 # degrees
+var max_health = 5
+var health = max_health
 var gravity = 10
 
 var look_sensitivity = 0.003
@@ -87,3 +89,6 @@ func set_ammo(amount):
 
 func jump():
 	velocity.y += 5
+
+func take_damage(amount: float):
+	health -= amount

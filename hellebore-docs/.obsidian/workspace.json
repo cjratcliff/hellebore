@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Renders.md",
+                "file": "To learn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Renders"
+              "title": "To learn"
             }
           }
         ],
@@ -203,12 +203,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "0eefe9b1c4b0405f",
+  "active": "54b71a9ac1dc1b17",
   "lastOpenFiles": [
+    "Renders.md",
+    "To learn.md",
     "Images/Pasted image 20261115161453.png",
     "Images/Pasted image 20261115161252.png",
     "Images/Pasted image 20261115153136.png",
-    "Renders.md",
     "Art/Examples.md",
     "Renders",
     "Enemies.md",
