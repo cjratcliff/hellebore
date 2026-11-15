@@ -1,4 +1,4 @@
-extends CharacterBody3D
+class_name Player extends CharacterBody3D
 
 var speed = 5
 var max_ammo = 6
@@ -83,8 +83,7 @@ func reload():
 	
 func set_ammo(amount):
 	ammo = amount
-	var hud = get_tree().get_first_node_in_group("hud")
-	hud.set_ammo(ammo)
+	Globals.get_hud().set_ammo(ammo)
 
 func jump():
 	velocity.y += 5

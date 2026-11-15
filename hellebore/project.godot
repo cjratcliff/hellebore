@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Pause="*uid://dt8it6mcj2u0w"
+Globals="*uid://d4h4hbx8ek4q"
 
 [display]
 
