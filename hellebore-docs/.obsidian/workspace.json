@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Similar games.md",
+                "file": "Renders.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Similar games"
+              "title": "Renders"
             }
           }
         ],
@@ -203,15 +203,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "54b71a9ac1dc1b17",
+  "active": "0eefe9b1c4b0405f",
   "lastOpenFiles": [
+    "Images/Pasted image 20261115161453.png",
+    "Images/Pasted image 20261115161252.png",
+    "Images/Pasted image 20261115153136.png",
+    "Renders.md",
     "Art/Examples.md",
-    "Images/Pasted image 20261115004016.png",
-    "Images/Pasted image 20261115003959.png",
+    "Renders",
     "Enemies.md",
-    "General.md",
     "Ideas beyond the core.md",
     "Similar games.md",
+    "Images/Pasted image 20261115004016.png",
+    "Images/Pasted image 20261115003959.png",
+    "General.md",
     "Images/Pasted image 20261112235526.png",
     "Images/Pasted image 20261112235250.png",
     "Images/Pasted image 20261112234124.png",
