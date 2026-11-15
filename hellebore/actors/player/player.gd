@@ -11,7 +11,7 @@ var gravity = 10
 
 var look_sensitivity = 0.003
 
-@onready var camera: Camera3D = $Camera3D
+@onready var camera: FirstPersonCamera = $Camera3D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -95,6 +95,7 @@ func take_damage(amount: float):
 	health -= amount
 	Globals.get_hud().set_health(health, max_health)
 	Globals.get_hud().hit_flash()
+	camera.trigger_shake()
 
 func _on_hitbox_body_entered(body: Node3D) -> void:
 	take_damage(1)

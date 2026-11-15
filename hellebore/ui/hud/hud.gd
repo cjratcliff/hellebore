@@ -28,5 +28,5 @@ func write(text) -> void:
 
 func hit_flash():
 	var tween = create_tween()
-	tween.tween_property(hit_flash_rect, "color:a", 0.1, 0.075)
+	tween.tween_property(hit_flash_rect, "color:a", 0.15, 0.075)
 	tween.tween_property(hit_flash_rect, "color:a", 0.0, 0.075)
