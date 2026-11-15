@@ -5,9 +5,9 @@ extends Control
 @onready var left: TextureRect = $Left
 @onready var right: TextureRect = $Right
 
-var transition_speed: float = 10.0 # Adjust for faster/slower smoothing
+var transition_speed: float = 10.0
 
-var desired_size: float = 0.0 #min_size
+var desired_size: float = 0.0
 var current_size: float = 0.0
 
 # Store original center positions (when there is no spacing)
@@ -17,7 +17,7 @@ var base_left_pos: Vector2
 var base_right_pos: Vector2
 
 func _ready() -> void:
-	# Save the initial positions before applying any offset
+	# Save the initial positions
 	base_up_pos = up.position
 	base_down_pos = down.position
 	base_left_pos = left.position
@@ -41,6 +41,7 @@ func _update_crosshair_positions(size: float) -> void:
 	right.position = base_right_pos + Vector2(size, 0)
 
 func set_crosshair_size(fov: float, spread_angle: float):
+	# if spread_angle 5 that means +/-5, so an arc of 10 degrees
 	desired_size = _calc_size(fov, spread_angle)
 
 func _calc_size(vertical_fov: float, spread_angle: float):
