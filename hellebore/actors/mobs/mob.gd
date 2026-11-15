@@ -29,13 +29,15 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if global_position.distance_to(next_pos) > 0.5:
+		# Turn smoothly
 		var target_position = global_position + dir * 1000
 		var target_transform = global_transform.looking_at(target_position, Vector3.UP)
 		
 		var current_quat = Quaternion(global_transform.basis)
 		var target_quat = Quaternion(target_transform.basis)
 		
-		var smoothed_quat = current_quat.slerp(target_quat, 2 * delta)
+		var rot_speed = 2.0
+		var smoothed_quat = current_quat.slerp(target_quat, rot_speed * delta)
 		global_transform.basis = Basis(smoothed_quat)
 
 func take_damage(amount: float):
