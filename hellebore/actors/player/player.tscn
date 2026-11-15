@@ -5,6 +5,8 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rybk0"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ilk7j"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1873314653 groups=["player"]]
 collision_layer = 2
 collision_mask = 5
@@ -19,3 +21,13 @@ transform = Transform3D(0.99784935, 0, 0.0655489, 0, 1, 0, -0.0655489, 0, 0.9978
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=704709170]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0627842, 0)
 shape = SubResource("CapsuleShape3D_rybk0")
+
+[node name="Hitbox" type="Area3D" parent="." unique_id=1267117477]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox" unique_id=1203149048]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 1.027253, 0)
+shape = SubResource("CapsuleShape3D_ilk7j")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

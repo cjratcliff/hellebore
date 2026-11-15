@@ -94,3 +94,6 @@ func jump():
 func take_damage(amount: float):
 	health -= amount
 	Globals.get_hud().set_health(health, max_health)
+
+func _on_hitbox_body_entered(body: Node3D) -> void:
+	take_damage(1)

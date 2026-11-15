@@ -10,6 +10,7 @@ Interesting enemy design keeps it from being a classic boomer shooter.
 - Enemy that makes nearby lights go out, like a dementor. They probably flicker first to give the player some warning and a chance to kill the creature.
 - Crebain. Flyers that can spot the player and alert other nearby creatures.
 ### Simple
+- Heavy enemy with a flamethrower. Explodes if you shoot the fuel tanks or get a headshot but otherwise hard to kill.
 - Giant spiders. About the size of a dog. When they get close enough they leap at the player.
 - Imps. Hurls fireballs at the player. Agile.
 - Trash mob. Melee attacker.
