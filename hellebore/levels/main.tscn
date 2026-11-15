@@ -4,10 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bivg44rdf550e" path="res://ui/hud/hud.tscn" id="1_l8qe7"]
 [ext_resource type="PackedScene" uid="uid://bdwub74y0vit1" path="res://actors/mobs/mob.tscn" id="2_wdj6m"]
 [ext_resource type="Texture2D" uid="uid://616y5meg2f41" path="res://terrain/ground.png" id="4_m1504"]
+[ext_resource type="PackedScene" uid="uid://bss2fa0ujtc4l" path="res://props/wall.tscn" id="5_ifaiv"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_rybk0"]
-vertices = PackedVector3Array(-0.75, 0.4681635, -10.5, 1.25, 0.4681635, -10.5, 1.25, 0.4681635, -49.5, -1, 0.4681635, -9.25, -49.5, 0.4681635, -49.5, -49.5, 0.4681635, -9.25, 3.5, 0.4681635, -10.5, 3.75, 0.4681635, -9.25, 49.5, 0.4681635, -9.25, 49.5, 0.4681635, -49.5, -0.75, 0.4681635, -8.25, -49.5, 0.4681635, 49.5, 0.5, 0.4681635, 49.5, 0.75, 0.4681635, -8.25, 3.5, 0.4681635, -8.25, 2.25, 0.4681635, 49.5, 49.5, 0.4681635, 49.5, 2, 0.4681635, -8.25)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(6, 1, 2), PackedInt32Array(6, 2, 7), PackedInt32Array(7, 2, 8), PackedInt32Array(8, 2, 9), PackedInt32Array(3, 10, 5), PackedInt32Array(5, 10, 11), PackedInt32Array(11, 10, 12), PackedInt32Array(10, 13, 12), PackedInt32Array(7, 8, 14), PackedInt32Array(14, 8, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(15, 17, 14), PackedInt32Array(13, 17, 12), PackedInt32Array(12, 17, 15)]
+vertices = PackedVector3Array(-6, 0.5, -9.5, -5, 0.5, -10, -5, 0.5, -49.5, -49.5, 0.5, -49.5, -49.5, 0.5, -9, -6, 0.5, -9, 0.5, 0.5, -6.5, 0.5, 0.5, -8.5, -1.25, 0.5, -8.75, -2.5, 0.5, -6.5, -1, 0.5, -10.75, 5.5, 0.5, -13.25, 5.5, 0.5, -49.5, -3.5, 0.5, -9.5, 2.5, 0.5, -10.75, 6.75, 0.5, -12, 49.5, 0.5, -12, 49.5, 0.5, -49.5, 1, 0.5, -4.5, 0, 0.5, -4.25, 0.25, 0.5, -3, 4, 0.5, -3, 1, 0.5, -6.25, 4, 0.5, -8.75, 4.25, 0.5, -1.75, 49.5, 0.5, -1.75, 3.5, 1.5, -10.5, 3.5, 1.5, -10, 4.25, 1.5, -10.5, -0.5, 0.5, -2.75, -3.25, 0.5, -4.25, -3.5, 0.5, -5.25, -4.75, 0.5, -5.75, 1, 0.5, 49.5, 1.25, 0.5, -0.75, -0.5, 0.5, -1, -49.5, 0.5, 49.5, 4, 0.5, -0.75, 2.75, 0.5, 49.5, 49.5, 0.5, 49.5, 2.5, 0.5, -0.75)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(0, 5, 4), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(10, 1, 11), PackedInt32Array(11, 1, 12), PackedInt32Array(12, 1, 2), PackedInt32Array(10, 8, 13), PackedInt32Array(13, 8, 9), PackedInt32Array(11, 14, 10), PackedInt32Array(10, 13, 1), PackedInt32Array(11, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(16, 12, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(6, 7, 22), PackedInt32Array(22, 7, 23), PackedInt32Array(18, 22, 21), PackedInt32Array(21, 22, 23), PackedInt32Array(21, 23, 24), PackedInt32Array(24, 23, 15), PackedInt32Array(24, 15, 16), PackedInt32Array(24, 16, 25), PackedInt32Array(28, 27, 26), PackedInt32Array(20, 29, 19), PackedInt32Array(19, 29, 30), PackedInt32Array(32, 31, 30), PackedInt32Array(35, 34, 33), PackedInt32Array(30, 29, 35), PackedInt32Array(30, 35, 32), PackedInt32Array(32, 35, 4), PackedInt32Array(4, 35, 33), PackedInt32Array(4, 33, 36), PackedInt32Array(4, 5, 32), PackedInt32Array(24, 25, 37), PackedInt32Array(37, 25, 39), PackedInt32Array(37, 39, 38), PackedInt32Array(38, 40, 37), PackedInt32Array(34, 40, 33), PackedInt32Array(33, 40, 38)]
 geometry_source_geometry_mode = 2
 geometry_source_group_name = &"nav_mesh_source"
 
@@ -21,28 +22,22 @@ size = Vector2(100, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_4vq4b"]
 size = Vector3(100, 1, 100)
 
-[sub_resource type="BoxMesh" id="BoxMesh_rybk0"]
-size = Vector3(3.7420654, 1, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rybk0"]
-size = Vector3(3.74115, 1, 1)
-
 [node name="Node3D" type="Node3D" unique_id=2018712568]
 
 [node name="Hud" parent="." unique_id=1331191350 instance=ExtResource("1_l8qe7")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=570409846]
-visible = false
 navigation_mesh = SubResource("NavigationMesh_rybk0")
 
 [node name="Player" parent="." unique_id=1873314653 instance=ExtResource("1_2262g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39018893, 0, 4.7101936)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1867670455]
 transform = Transform3D(0.5895103, 0.5071961, -0.62867296, 0, 0.7782909, 0.6279039, 0.80776083, -0.37015578, 0.4588105, 0, 4.83245, 0)
 shadow_enabled = true
 
 [node name="Mob" parent="." unique_id=1102018426 instance=ExtResource("2_wdj6m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3659232, 0, -11.309397)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4521759, 0, -13.690159)
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=987102695]
 
@@ -54,12 +49,17 @@ mesh = SubResource("PlaneMesh_rybk0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_4vq4b")
 
-[node name="Cube" type="StaticBody3D" parent="." unique_id=1015292848]
+[node name="Wall" parent="." unique_id=1097783890 instance=ExtResource("5_ifaiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97707605, 0.027450323, -9.656678)
 
-[node name="Mesh" type="MeshInstance3D" parent="Cube" unique_id=51833535 groups=["nav_mesh_source"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3710327, 0.4681635, -9.492838)
-mesh = SubResource("BoxMesh_rybk0")
+[node name="Wall2" parent="." unique_id=477155740 instance=ExtResource("5_ifaiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2045894, 0.027451277, -5.4540052)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube" unique_id=189906820]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3645935, 0.4681635, -9.492838)
-shape = SubResource("BoxShape3D_rybk0")
+[node name="Wall3" parent="." unique_id=79173672 instance=ExtResource("5_ifaiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9249649, 0.027450323, -1.8036442)
+
+[node name="Wall4" parent="." unique_id=1200658799 instance=ExtResource("5_ifaiv")]
+transform = Transform3D(-0.72777116, 0, -0.68582004, 0, 1, 0, 0.68582004, 0, -0.72777116, 4.429836, 0.027450323, -10.95765)
+
+[node name="Wall5" parent="." unique_id=1174055217 instance=ExtResource("5_ifaiv")]
+transform = Transform3D(0.39941308, 0, -0.9167711, 0, 1, 0, 0.9167711, 0, 0.39941308, -4.1629806, 0.027450323, -7.6376047)

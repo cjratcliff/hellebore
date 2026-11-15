@@ -3,18 +3,20 @@
 [ext_resource type="Script" uid="uid://bj8kxut0qmfxy" path="res://actors/mobs/mob.gd" id="1_10m25"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rybk0"]
+height = 1.5240326
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rybk0"]
+height = 1.5206299
 
 [node name="Mob" type="CharacterBody3D" unique_id=1102018426]
 script = ExtResource("1_10m25")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=658500102]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0165948, 0)
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0.92647636, 0.13066863)
 shape = SubResource("CapsuleShape3D_rybk0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1869741568]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0526714, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.9414654, 0.128479)
 mesh = SubResource("CapsuleMesh_rybk0")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=6625863]
