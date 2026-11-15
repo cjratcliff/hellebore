@@ -17,17 +17,21 @@ During the survival phase the player could harvest, kill enemies for loot, just 
 What we most want to do is avoid making it two separate games, which would happen if the base design had no impact on or trade-off with survivability. Budget and space means there will always be some trade-off. You could also have adjacency effects and enemies that do very well in certain terrains.
 #### Building impacting survival
 1. Dangerous but lucrative.
-	1. Perhaps orchards earn well but are very dangerous at night. You might not go into them voluntarily but you might go in to escape something else, like Merry and Pippin.
+	1. Perhaps orchards earn well but are very dangerous at night. You might not go into them voluntarily (unless you're meant to harvest?) but you might go in to escape something else, like Merry and Pippin.
 	2. Fields that can catch fire.
 2. Healing waters
 3. Crops you can hide in.
 4. Lamps that can detect certain enemies that are otherwise only visible when attacking
 5. Water. Certain enemies may refuse to go through it.
 6. Either adding things to block line of sight or removing them so you don't get ambushed yourself.
+7. Sensors. Enable either all, most or certain enemies to appear on the radar. Don't make it too accurate or you'll remove the horror element. Inspiration from Alien and Lethal Company.
+8. Ammo dispensers.
+
+Don't need a vast amount of different buildings and buildable locations, especially if things can be upgraded. Think of Thronefall. It has 5 income buildings, 3 troop buildings, walls and barricades, 3 types of tower and the HQ.
 #### Survival impacting building and the economy?
 1. Crops catch fire.
-
-By bringing in new enemies while adding changing the environment, each round is different to the last. Passives are also possible, either instead or as well as.
+### Dynamics
+By bringing in new enemies in addition to changing the environment, each round is different to the last. Passives are also possible, either instead or as well as. If you want even more you could also have transient weather effects or anomalies.
 ### Comparisons
 Unlike tower defence the mission is not to protect the base, but to survive. If it was about the base you'd be constantly running everywhere which is annoying.
 

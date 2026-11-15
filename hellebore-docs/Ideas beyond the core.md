@@ -1,3 +1,4 @@
 - Weather
 	- Rain, fog
 - Anomalies, like in Stalker
+- The moon goes behind some clouds.
