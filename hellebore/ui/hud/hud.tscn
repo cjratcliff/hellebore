@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bbq1buv0ku1vs" path="res://ui/hud/hud.gd" id="1_276te"]
 [ext_resource type="PackedScene" uid="uid://b2032o78r8ms7" path="res://ui/hud/crosshair/crosshair.tscn" id="2_4d6w6"]
+[ext_resource type="Texture2D" uid="uid://becv4k61xpjbo" path="res://ui/hud/health_bar/bar_bg.png" id="3_w75iv"]
+[ext_resource type="Texture2D" uid="uid://bbvje1ky1783l" path="res://ui/hud/health_bar/health_fill.png" id="4_imuuq"]
 
 [node name="Hud" type="CanvasLayer" unique_id=1331191350 groups=["hud"]]
 script = ExtResource("1_276te")
@@ -15,6 +17,7 @@ offset_top = -97.0
 offset_right = 129.0
 offset_bottom = -74.0
 grow_vertical = 0
+text = "0"
 
 [node name="Crosshair" parent="." unique_id=1453729034 instance=ExtResource("2_4d6w6")]
 anchors_preset = 8
@@ -31,3 +34,18 @@ offset_bottom = 160.0
 layout_mode = 2
 bbcode_enabled = true
 scroll_following = true
+
+[node name="PlayerHealthBar" type="TextureProgressBar" parent="." unique_id=1692286685]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 78.0
+offset_top = -64.0
+offset_right = 242.0
+offset_bottom = -24.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+step = 0.0
+value = 50.0
+texture_under = ExtResource("3_w75iv")
+texture_progress = ExtResource("4_imuuq")

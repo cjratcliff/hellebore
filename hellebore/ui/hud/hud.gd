@@ -4,10 +4,14 @@ var debug_max_lines: int = 100
 var log_history = []
 
 @onready var ammo_label: Label = $Ammo
+@onready var health_bar: TextureProgressBar = $PlayerHealthBar
 @onready var debug_label: RichTextLabel = $MC/DebugRichTextLabel
 
 func set_ammo(amount):
 	ammo_label.text = str(amount)
+
+func set_health(health: float, max_health: float):
+	health_bar.value = 100.0 * (health / max_health)
 
 func write(text) -> void:
 	print(text)

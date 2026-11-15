@@ -16,6 +16,7 @@ var look_sensitivity = 0.003
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	set_ammo(max_ammo)
+	take_damage(0) # set health bar
 
 func _physics_process(delta: float) -> void:
 	var dir = Vector3.ZERO
@@ -92,3 +93,4 @@ func jump():
 
 func take_damage(amount: float):
 	health -= amount
+	Globals.get_hud().set_health(health, max_health)

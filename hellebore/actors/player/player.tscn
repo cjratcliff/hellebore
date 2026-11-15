@@ -6,6 +6,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rybk0"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1873314653 groups=["player"]]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_nvxhs")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1987355446]
