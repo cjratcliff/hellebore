@@ -19,7 +19,7 @@ What we most want to do is avoid making it two separate games, which would happe
 1. Dangerous but lucrative.
 	1. Perhaps orchards earn well but are very dangerous at night. You might not go into them voluntarily (unless you're meant to harvest?) but you might go in to escape something else, like Merry and Pippin.
 	2. Fields that can catch fire.
-2. Healing waters
+2. Healing waters. This is probably putting something in or next to the water to make it healing, rather than placing the water itself.
 3. Crops you can hide in.
 4. Lamps that can detect certain enemies that are otherwise only visible when attacking
 5. Water. Certain enemies may refuse to go through it.

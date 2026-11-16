@@ -1,13 +1,16 @@
 class_name Player extends CharacterBody3D
 
+# settings
 var speed = 5
 var max_ammo = 6
-var ammo = max_ammo
 var min_spread = 1.5 # degrees
 var max_spread = 6.0 # degrees
 var max_health = 5
-var health = max_health
 var gravity = 10
+
+var ammo = max_ammo
+var health = max_health
+var spread = 0.0 # degrees
 
 var look_sensitivity = 0.003
 
@@ -32,9 +35,11 @@ func _physics_process(delta: float) -> void:
 	
 	var crosshair = get_tree().get_first_node_in_group("crosshair")
 	if dir == Vector3.ZERO:
-		crosshair.set_crosshair_size(camera.fov, min_spread)
+		spread = min_spread
 	else:
-		crosshair.set_crosshair_size(camera.fov, max_spread)
+		spread = max_spread
+	
+	crosshair.set_crosshair_size(camera.fov, spread)
 	
 	velocity.x = dir.normalized().x * speed
 	velocity.z = dir.normalized().z * speed
@@ -71,8 +76,10 @@ func fire():
 	# Cast from the center of the camera
 	var viewport_center := get_viewport().get_visible_rect().size / 2
 	var origin = camera.project_ray_origin(viewport_center)
-	var end = origin + camera.project_ray_normal(viewport_center) * 1000
-	
+	var forward = camera.project_ray_normal(viewport_center)
+	var direction = get_spread_direction(forward, spread)
+	var end = origin + direction * 1000
+
 	var query = PhysicsRayQueryParameters3D.create(origin, end)
 	var result = space_state.intersect_ray(query)
 	
@@ -99,3 +106,20 @@ func take_damage(amount: float):
 
 func _on_hitbox_body_entered(body: Node3D) -> void:
 	take_damage(1)
+
+func get_spread_direction(forward: Vector3, half_angle_deg: float) -> Vector3:
+	# uniform sampling in a cone around the forward vector
+	# half_angle_deg is the angle from forward to the edge of the cone
+	var cos_max := cos(deg_to_rad(half_angle_deg))
+	var cos_theta := randf_range(cos_max, 1.0)   # uniform over the cone's solid angle
+	var sin_theta := sqrt(1.0 - cos_theta * cos_theta)
+	var phi := randf() * TAU
+
+	# Build an orthonormal basis around the forward direction
+	var helper := Vector3.UP if absf(forward.dot(Vector3.UP)) < 0.99 else Vector3.RIGHT
+	var right := forward.cross(helper).normalized()
+	var up := right.cross(forward).normalized()
+
+	return (forward * cos_theta
+		+ right * (sin_theta * cos(phi))
+		+ up * (sin_theta * sin(phi))).normalized()
