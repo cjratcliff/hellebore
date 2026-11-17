@@ -110,15 +110,15 @@ func _on_hitbox_body_entered(body: Node3D) -> void:
 func get_spread_direction(forward: Vector3, half_angle_deg: float) -> Vector3:
 	# uniform sampling in a cone around the forward vector
 	# half_angle_deg is the angle from forward to the edge of the cone
-	var cos_max := cos(deg_to_rad(half_angle_deg))
-	var cos_theta := randf_range(cos_max, 1.0)   # uniform over the cone's solid angle
-	var sin_theta := sqrt(1.0 - cos_theta * cos_theta)
-	var phi := randf() * TAU
+	var cos_max = cos(deg_to_rad(half_angle_deg))
+	var cos_theta = randf_range(cos_max, 1.0)
+	var sin_theta = sqrt(1.0 - cos_theta * cos_theta)
+	var phi = randf() * TAU
 
-	# Build an orthonormal basis around the forward direction
-	var helper := Vector3.UP if absf(forward.dot(Vector3.UP)) < 0.99 else Vector3.RIGHT
-	var right := forward.cross(helper).normalized()
-	var up := right.cross(forward).normalized()
+	# build an orthonormal basis around the forward direction
+	var helper = Vector3.UP if absf(forward.dot(Vector3.UP)) < 0.99 else Vector3.RIGHT
+	var right = forward.cross(helper).normalized()
+	var up = right.cross(forward).normalized()
 
 	return (forward * cos_theta
 		+ right * (sin_theta * cos(phi))
