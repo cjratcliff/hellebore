@@ -5,6 +5,8 @@ In a loop improve your base and then survive the night as spirits and whatnot pe
 This is a fairly natural thing. It should be possible to build naturally and watch the good stuff emerge. It's an interesting scenario so just creating a simulator for it is motivating in itself.
 
 You will want to take care of threats as soon as possible, before they can gather? It shouldn't feel like mowing the lawn.
+
+The general approach can be that the player learns the attack behaviours, strengths and weaknesses of each enemy and then figures out an approach, like learning the attack pattern in a souls-like. In ours there's more variety and thinking because it enemies can work together and it interacts with the level design.
 ### Environment
 - The survival phase has to take place at night due to all the mechanics around light
 ### Risk and reward during the survival phase

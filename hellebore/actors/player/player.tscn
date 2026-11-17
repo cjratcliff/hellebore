@@ -20,6 +20,10 @@ script = ExtResource("2_ax26v")
 [node name="shotgun2" parent="Camera3D" unique_id=1178110461 instance=ExtResource("4_lsqbn")]
 transform = Transform3D(-0.99720705, 0, -0.07468793, 0, 1, 0, 0.07468793, 0, -0.99720705, 0.3675239, -0.35492516, -0.5329259)
 
+[node name="shotgun3" parent="Camera3D" unique_id=1804232176 instance=ExtResource("4_lsqbn")]
+transform = Transform3D(-0.99720705, 0, -0.07468793, 0, 1, 0, 0.07468793, 0, -0.99720705, -0.021267846, -0.15459311, -0.2540265)
+visible = false
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=704709170]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0627842, 0)
 shape = SubResource("CapsuleShape3D_rybk0")

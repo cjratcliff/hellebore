@@ -1,0 +1,4 @@
+- Could it be set inside? Less Stardew, more Alien. Examples will be drawn from both indoor and outdoor settings and then we'll go from there.
+	- The big creatures with spotlights wouldn't really work but whatever. Also no fields on fire. It will reduce freedom of navigation (both for the player and enemies) but could make for more interesting environments with crates to hide behind and climb on, damaged walkways etc. Plus lighting can be everywhere, not to mention electricity and almost anything you can think of.
+	- Instead of turning out the lights completely the dementor enemy could mean that the emergency lights come on.
+- You can have both interior and exterior with an underground tunnels system below your base. Think of some of the FC3 maps. Very useful for when you need to move without being seen. Clearing passages or adding new ones could be part of the upgrades.
