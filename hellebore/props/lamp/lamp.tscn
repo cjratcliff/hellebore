@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b6nkgnnfm6lvm"]
+
+[ext_resource type="PackedScene" uid="uid://coax3hkemn0cf" path="res://props/lamp/lantern.glb" id="1_7omg3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rybk0"]
+size = Vector3(0.36843872, 3.9569702, 0.35916138)
+
+[node name="Lamp" type="StaticBody3D" unique_id=707571291 groups=["nav_mesh_source"]]
+
+[node name="lantern2" parent="." unique_id=578131895 instance=ExtResource("1_7omg3")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=414411258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053863525, 1.9129944, -0.030288696)
+shape = SubResource("BoxShape3D_rybk0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2044677772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4356837, -0.003005743)
+light_color = Color(1, 0.87474924, 0.6987043, 1)
+light_energy = 5.0
+shadow_enabled = true
+omni_range = 6.762031

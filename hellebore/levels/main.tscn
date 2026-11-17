@@ -5,10 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://bdwub74y0vit1" path="res://actors/mobs/mob.tscn" id="2_wdj6m"]
 [ext_resource type="Texture2D" uid="uid://616y5meg2f41" path="res://terrain/ground.png" id="4_m1504"]
 [ext_resource type="PackedScene" uid="uid://bss2fa0ujtc4l" path="res://props/wall.tscn" id="5_ifaiv"]
+[ext_resource type="PackedScene" uid="uid://b6nkgnnfm6lvm" path="res://props/lamp/lamp.tscn" id="6_5k4jt"]
+
+[sub_resource type="Environment" id="Environment_rybk0"]
+background_mode = 1
+background_color = Color(0.04384113, 0.04171996, 0.080609135, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_rybk0"]
-vertices = PackedVector3Array(-6, 0.5, -9.5, -5, 0.5, -10, -5, 0.5, -49.5, -49.5, 0.5, -49.5, -49.5, 0.5, -9, -6, 0.5, -9, 0.5, 0.5, -6.5, 0.5, 0.5, -8.5, -1.25, 0.5, -8.75, -2.5, 0.5, -6.5, -1, 0.5, -10.75, 5.5, 0.5, -13.25, 5.5, 0.5, -49.5, -3.5, 0.5, -9.5, 2.5, 0.5, -10.75, 6.75, 0.5, -12, 49.5, 0.5, -12, 49.5, 0.5, -49.5, 1, 0.5, -4.5, 0, 0.5, -4.25, 0.25, 0.5, -3, 4, 0.5, -3, 1, 0.5, -6.25, 4, 0.5, -8.75, 4.25, 0.5, -1.75, 49.5, 0.5, -1.75, 3.5, 1.5, -10.5, 3.5, 1.5, -10, 4.25, 1.5, -10.5, -0.5, 0.5, -2.75, -3.25, 0.5, -4.25, -3.5, 0.5, -5.25, -4.75, 0.5, -5.75, 1, 0.5, 49.5, 1.25, 0.5, -0.75, -0.5, 0.5, -1, -49.5, 0.5, 49.5, 4, 0.5, -0.75, 2.75, 0.5, 49.5, 49.5, 0.5, 49.5, 2.5, 0.5, -0.75)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(0, 5, 4), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(10, 1, 11), PackedInt32Array(11, 1, 12), PackedInt32Array(12, 1, 2), PackedInt32Array(10, 8, 13), PackedInt32Array(13, 8, 9), PackedInt32Array(11, 14, 10), PackedInt32Array(10, 13, 1), PackedInt32Array(11, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(16, 12, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(6, 7, 22), PackedInt32Array(22, 7, 23), PackedInt32Array(18, 22, 21), PackedInt32Array(21, 22, 23), PackedInt32Array(21, 23, 24), PackedInt32Array(24, 23, 15), PackedInt32Array(24, 15, 16), PackedInt32Array(24, 16, 25), PackedInt32Array(28, 27, 26), PackedInt32Array(20, 29, 19), PackedInt32Array(19, 29, 30), PackedInt32Array(32, 31, 30), PackedInt32Array(35, 34, 33), PackedInt32Array(30, 29, 35), PackedInt32Array(30, 35, 32), PackedInt32Array(32, 35, 4), PackedInt32Array(4, 35, 33), PackedInt32Array(4, 33, 36), PackedInt32Array(4, 5, 32), PackedInt32Array(24, 25, 37), PackedInt32Array(37, 25, 39), PackedInt32Array(37, 39, 38), PackedInt32Array(38, 40, 37), PackedInt32Array(34, 40, 33), PackedInt32Array(33, 40, 38)]
+vertices = PackedVector3Array(-6, 0.43451023, -9.5, -5, 0.43451023, -10, -5, 0.43451023, -49.5, -49.5, 0.43451023, -49.5, -49.5, 0.43451023, -9, -6, 0.43451023, -9, 0.5, 0.43451023, -6.5, 0.5, 0.43451023, -8.5, -1.25, 0.43451023, -8.75, -2.5, 0.43451023, -6.5, -1, 0.43451023, -10.75, 5.5, 0.43451023, -13.25, 5.5, 0.43451023, -49.5, -3.5, 0.43451023, -9.5, 2.5, 0.43451023, -10.75, 6.75, 0.43451023, -12, 49.5, 0.43451023, -12, 49.5, 0.43451023, -49.5, 1, 0.43451023, -4.5, 0, 0.43451023, -4.25, 0.25, 0.43451023, -3, 4, 0.43451023, -3, 1, 0.43451023, -6.25, 4, 0.43451023, -8.75, 4.75, 0.43451023, -2.75, 5, 0.43451023, -2, 49.5, 0.43451023, -2, 3.5, 1.4345102, -10.5, 3.5, 1.4345102, -10, 4.25, 1.4345102, -10.5, -3.25, 0.43451023, -4.25, -3.5, 0.43451023, -5, -4.25, 0.43451023, -5, -0.5, 0.43451023, -2.75, 1, 0.43451023, 49.5, 1.25, 0.43451023, -0.75, -0.5, 0.43451023, -1, -49.5, 0.43451023, 49.5, 4, 0.43451023, -0.75, 2.75, 0.43451023, 49.5, 49.5, 0.43451023, 49.5, 2.5, 0.43451023, -0.75)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(0, 5, 4), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(10, 1, 11), PackedInt32Array(11, 1, 12), PackedInt32Array(12, 1, 2), PackedInt32Array(10, 8, 13), PackedInt32Array(13, 8, 9), PackedInt32Array(11, 14, 10), PackedInt32Array(10, 13, 1), PackedInt32Array(11, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(16, 12, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(6, 7, 22), PackedInt32Array(22, 7, 23), PackedInt32Array(21, 18, 24), PackedInt32Array(24, 18, 22), PackedInt32Array(24, 22, 23), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 15), PackedInt32Array(25, 15, 16), PackedInt32Array(25, 16, 26), PackedInt32Array(29, 28, 27), PackedInt32Array(32, 31, 30), PackedInt32Array(20, 33, 19), PackedInt32Array(19, 33, 30), PackedInt32Array(36, 35, 34), PackedInt32Array(30, 33, 36), PackedInt32Array(30, 36, 32), PackedInt32Array(32, 36, 4), PackedInt32Array(4, 36, 34), PackedInt32Array(4, 34, 37), PackedInt32Array(4, 5, 32), PackedInt32Array(25, 26, 38), PackedInt32Array(38, 26, 40), PackedInt32Array(38, 40, 39), PackedInt32Array(39, 41, 38), PackedInt32Array(35, 41, 34), PackedInt32Array(34, 41, 39)]
 geometry_source_geometry_mode = 2
 geometry_source_group_name = &"nav_mesh_source"
 
@@ -26,6 +31,9 @@ size = Vector3(100, 1, 100)
 
 [node name="Hud" parent="." unique_id=1331191350 instance=ExtResource("1_l8qe7")]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=186665748]
+environment = SubResource("Environment_rybk0")
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=570409846]
 navigation_mesh = SubResource("NavigationMesh_rybk0")
 
@@ -34,6 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39018893, 0, 4.7101936)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1867670455]
 transform = Transform3D(0.5895103, 0.5071961, -0.62867296, 0, 0.7782909, 0.6279039, 0.80776083, -0.37015578, 0.4588105, 0, 4.83245, 0)
+light_energy = 0.15
 shadow_enabled = true
 
 [node name="Mob" parent="." unique_id=1102018426 instance=ExtResource("2_wdj6m")]
@@ -63,3 +72,9 @@ transform = Transform3D(-0.72777116, 0, -0.68582004, 0, 1, 0, 0.68582004, 0, -0.
 
 [node name="Wall5" parent="." unique_id=1174055217 instance=ExtResource("5_ifaiv")]
 transform = Transform3D(0.39941308, 0, -0.9167711, 0, 1, 0, 0.9167711, 0, 0.39941308, -4.1629806, 0.027450323, -7.6376047)
+
+[node name="Lamp" parent="." unique_id=707571291 instance=ExtResource("6_5k4jt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.272026, 9.536743e-07, -1.9817119)
+
+[node name="Lamp2" parent="." unique_id=1982082969 instance=ExtResource("6_5k4jt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6498709, 9.536743e-07, -5.775144)
